@@ -1,9 +1,9 @@
 class Projectile {
-  int x, y, w, h, speed;
+  float x, y, w, h, speed;
 
 
   //constructor
-  Projectile(int x, int y) {
+  Projectile(float x, float y) {
     this.x = x;
     this.y = y;
     w = 10;
@@ -19,7 +19,7 @@ class Projectile {
   void move() {
     y = y - speed;
   }
-  boolean intersect(Obstale o) {
+  boolean intersect(Obstacle o) {
     float distance = dist(x, y, o.x, o.y);
     if (distance < 100) {
       return true;
